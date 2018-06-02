@@ -8,7 +8,7 @@ namespace XtrmAddons.Net.Application.Helpers
     /// <para>Class XtrmAddons Net Application Serializer Helper.</para>
     /// <para>This class provides definitions for application serialization and deserialization.</para>
     /// </summary>
-    internal abstract class SerializerHelper : ISerializer
+    public abstract class SerializerHelper : ISerializer
     {
         #region Properties
 
