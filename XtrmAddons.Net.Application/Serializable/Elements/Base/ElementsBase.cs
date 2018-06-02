@@ -167,7 +167,7 @@ namespace XtrmAddons.Net.Application.Serializable.Elements.Base
 
 
 
-        #region Methods Remove
+        #region Methods Replace
 
         /// <summary>
         /// <para>Method to add or update an element by its Key property value.</para>
