@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using log4net.Repository;
+using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 using System.Threading;
