@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtrmAddons.Net.Application", ".\XtrmAddons.Net.Application\XtrmAddons.Net.Application.csproj", "{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtrmAddons.Net.Application.Examples", ".\XtrmAddons.Net.Application.Examples\XtrmAddons.Net.Application.Examples.csproj", "{57D897AD-4872-4DA0-B28C-E49ABE23D2ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D897AD-4872-4DA0-B28C-E49ABE23D2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D897AD-4872-4DA0-B28C-E49ABE23D2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D897AD-4872-4DA0-B28C-E49ABE23D2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D897AD-4872-4DA0-B28C-E49ABE23D2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {101796C0-2144-44A1-A5A7-54F47124C52A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC9CEFF7-1AEF-480F-81F6-4CDF4019FC82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XtrmAddons.Net.Application</RootNamespace>
+    <AssemblyName>XtrmAddons.Net.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>None.None.DateStamp.TimeStamp</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>None.None.DateStamp.TimeStamp</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.DateStamp.TimeStamp</AssemblyInfoVersionSettings>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\packages\XtrmAddons\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\packages\XtrmAddons\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\packages\XtrmAddons\Release\XtrmAddons.Net.Application.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsBase">
+      <Version>4.6.1055</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XtrmAddons.Net.Common">
+      <HintPath>..\..\XtrmAddons-.Net-Libraries-Wpf\packages\XtrmAddons\Release\XtrmAddons.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="XtrmAddons.Net.SystemIO">
+      <HintPath>..\..\XtrmAddons-.Net-Libraries-Wpf\packages\XtrmAddons\Release\XtrmAddons.Net.SystemIO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationSession.cs" />
+    <Compile Include="Application\Helpers\DirectoryHelper.cs" />
+    <Compile Include="Application\Helpers\SerializerHelper.cs" />
+    <Compile Include="Application\Helpers\SerializerHelperXml.cs" />
+    <Compile Include="Application\Helpers\SerializerHelperJson.cs" />
+    <Compile Include="Application\Interfaces\ISerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializable\Elements\Data\Databases.cs" />
+    <Compile Include="Application\ObjectBaseNotifier.cs" />
+    <Compile Include="Serializable\Elements\Base\ElementBaseObjects.cs" />
+    <Compile Include="Serializable\Elements\Remote\RemoteOptions.cs" />
+    <Compile Include="Serializable\Elements\Remote\Client.cs" />
+    <Compile Include="Serializable\Elements\Remote\RemoteInfo.cs" />
+    <Compile Include="Serializable\Elements\Remote\Server.cs" />
+    <Compile Include="Serializable\Elements\Remote\Clients.cs" />
+    <Compile Include="Serializable\Elements\Remote\Servers.cs" />
+    <Compile Include="Serializable\Elements\Remote\RemoteType.cs" />
+    <Compile Include="Serializable\Elements\Remote\RemoteTypeExtensions.cs" />
+    <Compile Include="Serializable\Elements\Storage\Directories.cs" />
+    <Compile Include="Serializable\Elements\Base\ElementsBase.cs" />
+    <Compile Include="Serializable\Elements\Ui\UiElements.cs" />
+    <Compile Include="Serializable\Elements\Ui\BindingProperty.cs" />
+    <Compile Include="Serializable\Elements\Ui\UiElement.cs" />
+    <Compile Include="Serializable\Elements\Data\DataOptions.cs" />
+    <Compile Include="Serializable\Elements\Data\Database.cs" />
+    <Compile Include="Serializable\Elements\Storage\Directory.cs" />
+    <Compile Include="Serializable\Elements\Storage\StorageOptions.cs" />
+    <Compile Include="Serializable\Elements\Base\ElementBase.cs" />
+    <Compile Include="Serializable\Elements\Base\ElementBaseObject.cs" />
+    <Compile Include="Serializable\Interfaces\ISerializableInfo.cs" />
+    <Compile Include="Serializable\Options.cs" />
+    <Compile Include="Serializable\Preferences.cs" />
+    <Compile Include="Serializable\Elements\Storage\SpecialDirectories.cs" />
+    <Compile Include="ApplicationBase.cs" />
+    <Compile Include="Serializable\UserInterface.cs" />
+    <Compile Include="Tools\ApplicationTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
