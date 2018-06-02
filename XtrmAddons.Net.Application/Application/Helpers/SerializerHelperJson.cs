@@ -146,6 +146,7 @@ namespace XtrmAddons.Net.Application.Helpers
         /// </summary>
         /// <typeparam name="T">The Class of object to deserialize.</typeparam>
         /// <param name="filename">The file name, absolute file path.</param>
+        /// <param name="serializerSettings">The Json serializer settings.<param>
         /// <returns>A deserialized Json object.</returns>
         public T Deserialize<T>(string filename, JsonSerializerSettings serializerSettings)
         {
