@@ -7,7 +7,10 @@ using XtrmAddons.Net.Common.Extensions;
 
 namespace XtrmAddons.Net.Application.Helpers
 {
-    internal class SerializerHelperJson : SerializerHelper
+    /// <summary>
+    /// Class XtrmAddons Net Application Helpers Json.
+    /// </summary>
+    public class SerializerHelperJson : SerializerHelper
     {
         #region Properties
 

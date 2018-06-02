@@ -5,7 +5,10 @@ using XtrmAddons.Net.Application.Serializable;
 
 namespace XtrmAddons.Net.Application.Helpers
 {
-    internal class SerializerHelperXml : SerializerHelper
+    /// <summary>
+    /// Class XtrmAddons Net Application Helpers Xml.
+    /// </summary>
+    public class SerializerHelperXml : SerializerHelper
     {
         #region Properties
 

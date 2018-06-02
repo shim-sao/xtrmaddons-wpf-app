@@ -6,7 +6,7 @@ namespace XtrmAddons.Net.Application.Interfaces
     /// <para>Class XtrmAddons Net Application Serializer Interfaces</para>
     /// <para>This interface implement how an application base must be defines.</para>
     /// </summary>
-    internal interface ISerializer
+    public interface ISerializer
     {
         #region Properties
 
