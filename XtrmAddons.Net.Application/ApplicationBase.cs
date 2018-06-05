@@ -175,6 +175,60 @@ namespace XtrmAddons.Net.Application
         }
 
         /// <summary>
+        /// Method to save the application preferences.
+        /// </summary>
+        public static void SavePreferences()
+        {
+            switch(SerializerType)
+            {
+                case ApplicationSerializer.Json :
+                    var a = (SerializerHelper as SerializerHelperJson);
+                    (SerializerHelper as SerializerHelperJson).SavePreferences(prefs);
+                    break;
+
+                case ApplicationSerializer.Xml:
+                    (SerializerHelper as SerializerHelperXml).SavePreferences(prefs);
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Method to save the application options.
+        /// </summary>
+        public static void SaveOptions()
+        {
+            switch (SerializerType)
+            {
+                case ApplicationSerializer.Json:
+                    var a = (SerializerHelper as SerializerHelperJson);
+                    (SerializerHelper as SerializerHelperJson).SaveOptions();
+                    break;
+
+                case ApplicationSerializer.Xml:
+                    (SerializerHelper as SerializerHelperXml).SaveOptions();
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Method to save the application user interface.
+        /// </summary>
+        public static void SaveUi()
+        {
+            switch(SerializerType)
+            {
+                case ApplicationSerializer.Json :
+                    var a = (SerializerHelper as SerializerHelperJson);
+                    (SerializerHelper as SerializerHelperJson).SaveUi();
+                    break;
+
+                case ApplicationSerializer.Xml:
+                    (SerializerHelper as SerializerHelperXml).SaveUi();
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Method to trace main application preferences.
         /// </summary>
         public static void Debug()
