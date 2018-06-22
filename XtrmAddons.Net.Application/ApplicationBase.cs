@@ -99,6 +99,19 @@ namespace XtrmAddons.Net.Application
         #region Methods
 
         /// <summary>
+        /// Method to add an action to the current application dispatcher if required.
+        /// </summary>
+        /// <param name="action"></param>
+        /// <see href="https://www.codeproject.com/Questions/1173661/Thread-error-in-WPF-already-in-use"/>
+        /// <example>
+        /// ApplicationBase.BeginInvokeIfRequired(()=>Instance.txtReport.Text = "value will set here.");
+        /// </example>
+        public static void BeginInvokeIfRequired(Action action)
+        {
+            System.Windows.Application.Current.Dispatcher.BeginInvokeIfRequired(action);
+        }
+
+        /// <summary>
         /// <para>Method to start an application.</para>
         /// <para>Set ApplicationBase.SerializerType to change the type of Serializer before starting the application.</para>
         /// </summary>
@@ -235,22 +248,22 @@ namespace XtrmAddons.Net.Application
         {
             Trace.WriteLine(string.Format("# {0}.{1} ------------------------------------------------", MethodBase.GetCurrentMethod().ReflectedType.Name, MethodBase.GetCurrentMethod().Name));
 
-            Trace.WriteLine("Application Friendly Name = " + ApplicationFriendlyName);
-            Trace.WriteLine("Application Roaming Directory = " + DirectoryHelper.UserAppData);
-            Trace.WriteLine("User My Documents Directory = " + DirectoryHelper.UserMyDocuments);
+            Trace.TraceInformation("Application Friendly Name = " + ApplicationFriendlyName);
+            Trace.TraceInformation("Application Roaming Directory = " + DirectoryHelper.UserAppData);
+            Trace.TraceInformation("User My Documents Directory = " + DirectoryHelper.UserMyDocuments);
 
             // Displays default application specials directories.
-            Trace.WriteLine("--- Specials Directories ---");
-            Trace.WriteLine("Bin = " + Directories.Bin);
-            Trace.WriteLine("Cache = " + Directories.Cache);
-            Trace.WriteLine("Config = " + Directories.Config);
-            Trace.WriteLine("Data = " + Directories.Data);
-            Trace.WriteLine("Logs = " + Directories.Logs);
-            Trace.WriteLine("Theme = " + Directories.Theme);
+            Trace.TraceInformation("--- Specials Directories ---");
+            Trace.TraceInformation("Bin = " + Directories.Bin);
+            Trace.TraceInformation("Cache = " + Directories.Cache);
+            Trace.TraceInformation("Config = " + Directories.Config);
+            Trace.TraceInformation("Data = " + Directories.Data);
+            Trace.TraceInformation("Logs = " + Directories.Logs);
+            Trace.TraceInformation("Theme = " + Directories.Theme);
 
             // Displays default application language.
-            Trace.WriteLine("--- language ---");
-            Trace.WriteLine("Language = " + Language);
+            Trace.TraceInformation("--- language ---");
+            Trace.TraceInformation("Language = " + Language);
 
             Trace.WriteLine("-------------------------------------------------------------------------------------------------------");
         }
