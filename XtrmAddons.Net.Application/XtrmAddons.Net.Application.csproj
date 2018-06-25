@@ -64,9 +64,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="XtrmAddons.Net.Common">
       <HintPath>..\..\XtrmAddons-.Net-Libraries-Wpf\packages\XtrmAddons\Release\XtrmAddons.Net.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="XtrmAddons.Net.SystemIO">
       <HintPath>..\..\XtrmAddons-.Net-Libraries-Wpf\packages\XtrmAddons\Release\XtrmAddons.Net.SystemIO.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
