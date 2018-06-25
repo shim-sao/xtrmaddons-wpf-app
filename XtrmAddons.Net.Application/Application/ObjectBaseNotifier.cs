@@ -7,6 +7,7 @@ namespace XtrmAddons.Net.Application.Application
     /// <summary>
     /// Class XtrmAddons Net Application Object Base Notify Property Changed.
     /// </summary>
+    [System.Obsolete("Use : [XtrmAddons.Net.Common.Objects.ObjectBaseNotifier] instead.")]
     public abstract class ObjectBaseNotifier : INotifyPropertyChanged
     {
         #region Event Handler
