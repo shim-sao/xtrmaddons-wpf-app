@@ -80,7 +80,6 @@
     <Compile Include="Application\Interfaces\ISerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializable\Elements\Data\Databases.cs" />
-    <Compile Include="Application\ObjectBaseNotifier.cs" />
     <Compile Include="Serializable\Elements\Base\ElementBaseObjects.cs" />
     <Compile Include="Serializable\Elements\Remote\RemoteOptions.cs" />
     <Compile Include="Serializable\Elements\Remote\Client.cs" />
