@@ -2,8 +2,8 @@
 using System;
 using System.Xml;
 using System.Xml.Serialization;
-using XtrmAddons.Net.Application.Application;
 using XtrmAddons.Net.Common.Extensions;
+using XtrmAddons.Net.Common.Objects;
 
 namespace XtrmAddons.Net.Application.Serializable.Elements.Ui
 {
