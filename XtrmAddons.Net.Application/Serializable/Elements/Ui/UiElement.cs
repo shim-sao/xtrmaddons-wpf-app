@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 using System.Xml.Serialization;
@@ -124,9 +124,9 @@ namespace XtrmAddons.Net.Application.Serializable.Elements.Ui
         /// </summary>
         /// <param name="ctrl"></param>
         /// <returns></returns>
-        public static string KeyFormat(Control ctrl)
+        public static string KeyFormat(FrameworkElement ctrl)
         {
-            return string.Format(CultureInfo.InvariantCulture, "{0}.{1}", ctrl.Uid, ctrl.Name);
+            return $"{ctrl.Uid}.{ctrl.Name}";
         }
 
         /// <summary>
@@ -136,6 +136,11 @@ namespace XtrmAddons.Net.Application.Serializable.Elements.Ui
         /// <returns></returns>
         public BindingProperty<T> FindBindingProperty(string name)
         {
+            if(Context.Count == 0)
+            {
+                return null;
+            }
+
             return Context.Find(x => x.Name == name);
         }
 

@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Controls;
 using XtrmAddons.Net.Application.Serializable.Elements.Base;
 using XtrmAddons.Net.Common.Extensions;
@@ -41,7 +43,15 @@ namespace XtrmAddons.Net.Application.Serializable.Elements.Ui
         /// <returns>The founded element otherwise, default value of type T, or null if type T is nullable.</returns>
         public UiElement<object> FindControl(Control ctrl)
         {
+            if(Count == 0)
+            {
+                return null;
+            }
+
             string key = UiElement<object>.KeyFormat(ctrl);
+
+            Debug.WriteLine($"{GetType().Name}.{MethodBase.GetCurrentMethod().Name} : {ctrl?.GetType()?.Name} {key}");
+
             return Find(x => x.HasPropertyEquals("Key", key));
         }
     }
