@@ -6,7 +6,7 @@ namespace XtrmAddons.Net.Application
     /// <para>Class XtrmAddons Net Application Session</para>
     /// <para>This class can be used to manage global application objects.</para>
     /// </summary>
-    public class ApplicationSession
+    public static class ApplicationSession
     {
         /// <summary>
         /// Property to access to the application session properties in dynamic key|value pair.
