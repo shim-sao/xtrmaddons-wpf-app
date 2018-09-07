@@ -195,17 +195,16 @@ namespace XtrmAddons.Net.Application.Serializable.Elements.Base
         public void ReplaceDefault(T element)
         {
             T item = FindDefaultFirst();
+            SetDefaultAllNone();
             element.SetPropertyValue("IsDefault", true);
 
             if (item == null || item.Equals(default(T)))
             {
-                SetDefaultAllNone();
                 Add(element);
             }
             else
             {
                 int index = FindIndex(x => (bool)x.GetPropertyValue("IsDefault") == true);
-                SetDefaultAllNone();
                 this[index] = element;
             }
         }
