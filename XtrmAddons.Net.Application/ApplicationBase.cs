@@ -178,11 +178,11 @@ namespace XtrmAddons.Net.Application
             {
                 case ApplicationSerializer.Json :
                     var a = (SerializerHelper as SerializerHelperJson);
-                    (SerializerHelper as SerializerHelperJson).SaveAll(prefs);
+                    ((SerializerHelperJson)SerializerHelper).SaveAll(prefs);
                     break;
 
                 case ApplicationSerializer.Xml:
-                    (SerializerHelper as SerializerHelperXml).SaveAll(prefs);
+                    ((SerializerHelperXml)SerializerHelper).SaveAll(prefs);
                     break;
             }
         }
@@ -196,11 +196,11 @@ namespace XtrmAddons.Net.Application
             {
                 case ApplicationSerializer.Json :
                     var a = (SerializerHelper as SerializerHelperJson);
-                    (SerializerHelper as SerializerHelperJson).SavePreferences(prefs);
+                    ((SerializerHelperJson)SerializerHelper).SavePreferences(prefs);
                     break;
 
                 case ApplicationSerializer.Xml:
-                    (SerializerHelper as SerializerHelperXml).SavePreferences(prefs);
+                    ((SerializerHelperXml)SerializerHelper).SavePreferences(prefs);
                     break;
             }
         }
@@ -214,11 +214,11 @@ namespace XtrmAddons.Net.Application
             {
                 case ApplicationSerializer.Json:
                     var a = (SerializerHelper as SerializerHelperJson);
-                    (SerializerHelper as SerializerHelperJson).SaveOptions();
+                    ((SerializerHelperJson)SerializerHelper).SaveOptions();
                     break;
 
                 case ApplicationSerializer.Xml:
-                    (SerializerHelper as SerializerHelperXml).SaveOptions();
+                    ((SerializerHelperXml)SerializerHelper).SaveOptions();
                     break;
             }
         }
@@ -232,11 +232,11 @@ namespace XtrmAddons.Net.Application
             {
                 case ApplicationSerializer.Json :
                     var a = (SerializerHelper as SerializerHelperJson);
-                    (SerializerHelper as SerializerHelperJson).SaveUi();
+                    ((SerializerHelperJson)SerializerHelper).SaveUi();
                     break;
 
                 case ApplicationSerializer.Xml:
-                    (SerializerHelper as SerializerHelperXml).SaveUi();
+                    ((SerializerHelperXml)SerializerHelper).SaveUi();
                     break;
             }
         }
