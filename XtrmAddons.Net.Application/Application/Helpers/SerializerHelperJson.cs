@@ -14,6 +14,25 @@ namespace XtrmAddons.Net.Application.Helpers
     {
         #region Properties
 
+#if DEBUG
+
+        /// <summary>
+        /// Constant preferences Json file name. 
+        /// </summary>
+        public override string FileName_Preferences { get; } = "preferences.debug.json";
+
+        /// <summary>
+        /// Constant options Json file name.
+        /// </summary>
+        public override string FileName_Options { get; } = "options.debug.json";
+
+        /// <summary>
+        /// Constant user interface Json file name.
+        /// </summary>
+        public override string FileName_Ui { get; } = "ui.debug.json";
+
+#else
+
         /// <summary>
         /// Constant preferences Json file name. 
         /// </summary>
@@ -28,6 +47,8 @@ namespace XtrmAddons.Net.Application.Helpers
         /// Constant user interface Json file name.
         /// </summary>
         public override string FileName_Ui { get; } = "ui.json";
+
+#endif
 
         #endregion
 
@@ -157,7 +178,7 @@ namespace XtrmAddons.Net.Application.Helpers
             return JsonConvert.DeserializeObject<T>(str, serializerSettings);
         }
 
-        #endregion
+#endregion
 
     }
 }
