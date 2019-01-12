@@ -20,7 +20,7 @@ namespace XtrmAddons.Net.Application.Examples
         /// Variable logger.
         /// </summary>
         private static readonly log4net.ILog log =
-            log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         /// <summary>
         /// <para>Variable to define if the application must be reset on start.</para>
