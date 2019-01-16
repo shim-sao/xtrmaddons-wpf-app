@@ -328,8 +328,3 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-XtrmAddons.Net.Application/Application/Helpers/JsonConverters/JsonConverterBase.cs
-XtrmAddons.Net.Application/Application/Helpers/JsonConverters/JsonConverterOptions.cs
-XtrmAddons.Net.Application/Application/Helpers/JsonConverters/JsonConverterPreferences.cs
-XtrmAddons.Net.Application/Application/Helpers/JsonConverters/JsonConverterUi.cs
-XtrmAddons.Net.Application/Application/Helpers/SerializerHelperJson.old.cs
