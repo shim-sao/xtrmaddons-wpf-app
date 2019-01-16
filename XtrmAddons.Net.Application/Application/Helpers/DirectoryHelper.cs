@@ -85,7 +85,15 @@ namespace XtrmAddons.Net.Application.Helpers
 
                 if (prefs.BaseDirectory.IsNullOrWhiteSpace())
                 {
-                   prefs.BaseDirectory = UserMyDocuments;
+                    Trace.WriteLine($"Base directory is empty, default : {UserMyDocuments}");
+                    prefs.BaseDirectory = UserMyDocuments;
+                }
+
+                if(!System.IO.Directory.Exists(prefs.BaseDirectory))
+                {
+                    Trace.WriteLine($"Base directory not exists : {prefs.BaseDirectory}");
+                    Trace.WriteLine($"Default Base directory : {UserMyDocuments}");
+                    prefs.BaseDirectory = UserMyDocuments;
                 }
 
                 return prefs.BaseDirectory;
@@ -97,8 +105,7 @@ namespace XtrmAddons.Net.Application.Helpers
                 {
                     Trace.WriteLine(new NullReferenceException(nameof(prefs)));
                 }
-                else
-                if (value != prefs.BaseDirectory)
+                else if (value != prefs.BaseDirectory)
                 {
                     if (!System.IO.Directory.Exists(value))
                     {
@@ -404,18 +411,21 @@ namespace XtrmAddons.Net.Application.Helpers
                 return "";
             }
 
+            // Get path from preferences.
             string path = prefs.SpecialDirectories.GetPropertyValue<string>(prefName);
 
+            // Check if the path is not empty.
             if (path.IsNullOrWhiteSpace())
             {
                 path = Path.Combine(root, sdName);
 
-                if (!System.IO.Directory.Exists(path))
-                {
-                    System.IO.Directory.CreateDirectory(path);
-                }
-
                 prefs.SpecialDirectories.SetPropertyValue(prefName, path);
+            }
+
+            // Always create special directory and sub-directories if not exists.
+            if (!System.IO.Directory.Exists(path))
+            {
+                System.IO.Directory.CreateDirectory(path);
             }
 
             return path;
